@@ -394,7 +394,7 @@ class test_ElasticsearchBackend:
         es_datetime_mock.now.return_value = expected_dt
 
         expected_done_dt = datetime(2020, 6, 1, 18, 45, 34, 654321, timezone.utc)
-        base_datetime_mock.now.return_value = expected_done_dt
+        base_datetime_mock.return_value = expected_done_dt
 
         self.app.conf.result_backend_always_retry, prev = True, self.app.conf.result_backend_always_retry
         x_server_get_side_effect = [
@@ -505,7 +505,7 @@ class test_ElasticsearchBackend:
         es_datetime_mock.now.return_value = expected_dt
 
         expected_done_dt = datetime(2020, 6, 1, 18, 45, 34, 654321, timezone.utc)
-        base_datetime_mock.now.return_value = expected_done_dt
+        base_datetime_mock.return_value = expected_done_dt
 
         self.app.conf.result_backend_always_retry, prev = True, self.app.conf.result_backend_always_retry
         try:
@@ -576,7 +576,7 @@ class test_ElasticsearchBackend:
         es_datetime_mock.now.return_value = expected_dt
 
         expected_done_dt = datetime(2020, 6, 1, 18, 45, 34, 654321, timezone.utc)
-        base_datetime_mock.now.return_value = expected_done_dt
+        base_datetime_mock.return_value = expected_done_dt
 
         self.app.conf.result_backend_always_retry, prev = True, self.app.conf.result_backend_always_retry
         try:
@@ -644,7 +644,7 @@ class test_ElasticsearchBackend:
         es_datetime_mock.now.return_value = expected_dt
 
         expected_done_dt = datetime(2020, 6, 1, 18, 45, 34, 654321, timezone.utc)
-        base_datetime_mock.now.return_value = expected_done_dt
+        base_datetime_mock.return_value = expected_done_dt
 
         # self.app.conf.result_backend_always_retry, prev = True, self.app.conf.result_backend_always_retry
         # try:
